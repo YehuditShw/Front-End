@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>library</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/spa.css">
+    <link rel="stylesheet" href="../css/css.css">
+</head>
+
+<body>
+    <main>
+        <div class="page active" id="home">
+            <h1>home</h1>
+            <a href="#" data-target="administratorlog" class="nav-link">Login as an administrator</a>
+            <a href="#" data-target="login" class="nav-link">log in</a>
+            <a href="#" data-target="signup" class="nav-link">sign up</a>
+            <a href="#" onclick="library(event)">library</a>
+            <a href="#" onclick="logout()" data-target="home" class="nav-link">log out</a>
+        </div>
+
+
+        <div class="page" id="login">
+            <h1>log in</h1>
+            <a href="#" data-target="home" class="nav-link">home</a>
+            <a href="#" data-target="signup" class="nav-link">sign up</a>
+            <a href="#" data-target="administratorlog" class="nav-link">Login as an administrator</a>
+            <div class="login-form">
+                <form onsubmit="login(event)">
+                    <input type="email" placeholder="Your email" class="input" name="lemail" required>
+                    <button type="submit" name="logBotton" >log in</button>
+                </form>
+
+            </div>
+        </div>
+
+
+        <div class="page" id="signup">
+            <h1>sign up</h1>
+            <a href="#" data-target="home" class="nav-link">home</a>
+            <a href="#" data-target="login" class="nav-link">log in</a>
+            <a href="#" data-target="administratorlog" class="nav-link">Login as an administrator</a>
+            <div class="signUp-form">
+                <form onsubmit = "signUp_(event)">
+                    <input type="text" placeholder="Your Username" class="input" name="name" required>
+                    <input type="email" placeholder="Your email" class="input" name="semail" required>
+                    <button type ="submit" name="signBotton" >sign up</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="page administratorlog" id="administratorlog">
+            <h1>administrator</h1>
+            <a href="#" data-target="home" class="nav-link">home</a>
+            <div>
+                <form onsubmit="administrator(event)">
+                    <input type="password" placeholder="Your password" class="input" name="password" required>
+                    <button type="submit" name="administratorButton" >log in</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="page library" id="library">
+            <h1>library</h1>
+            <a href="#" data-target="home" class="nav-link">home</a>
+            <a href="#" onclick="logout()"  data-target="home" class="nav-link">log out</a>
+            <div>
+                <button id = "myBooks" class="button1 button">user books</button>
+                <button id ="takeBook" class="button">take a book</button>
+                <button id ="returnBook" class="button">return book</button>
+            </div>
+            <div id ="libraryContent"></div>
+        </div>
+
+
+        <div class="page administrator" id="administrator">
+            <h1>administrator</h1>
+            <a href="#"  data-target="home" class="nav-link">home</a>
+            <a href="#" onclick="logout()"  data-target="home" class="nav-link">log out</a>
+            <div>
+                <button id="getUsers" class="button">get users</button>
+                <button id="getUser" class="button">get specific user</button>
+                <button id="getBooks" class="button">get books</button>
+                <button id="addBooks" class="button">add a book</button>
+                <button id="deleteBooks" class="button">delete a book</button>
+            </div>
+            <div id="administratorContent"></div>
+        </div>
+    </main>
+    <script src="../js/spa.js"></script>
+    <script src="../js/dbApi.js"></script>
+    <script src="../js/server.js"></script>
+    <script src="../js/fajax.js"></script>
+    <script src="../js/client.js"></script>
+    <script src="../js/user.js"></script>
+    <script src="../js/administor.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>
