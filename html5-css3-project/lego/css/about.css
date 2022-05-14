@@ -1,0 +1,22 @@
+
+th,td{
+    width: 100%;
+    background-color: rgba(168, 164, 164, 0.568);
+    margin:10%;
+    width:20%;
+    color:fffff;
+    padding:1%;
+}
+
+th{
+    background: rgba(255, 217, 0, 0.493);
+    text-align: center;
+}
+table{
+    border: groove 0.5px gray;
+    margin-top: 5%;
+}
+table a{
+    text-decoration-line: none;
+    color: black;
+}
